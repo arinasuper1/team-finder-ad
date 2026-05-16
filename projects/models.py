@@ -1,6 +1,6 @@
 from django.db import models
 from django.conf import settings
-from constants import constants_user as constant
+from constants import constants_projects as constant
 
 
 class Project(models.Model):

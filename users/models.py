@@ -4,7 +4,7 @@ from PIL import Image, ImageDraw, ImageFont
 import random
 import io
 from django.core.files.base import ContentFile
-from constants import constants_user as constant
+from constants import constants_users as constant
 
 
 class UserManager(BaseUserManager):
