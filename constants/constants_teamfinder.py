@@ -9,3 +9,5 @@ AVATAR_FONT_SIZE = 100
 AVATAR_UPLOAD_DIR = 'avatars/'
 
 PASSWORD_MIN_LENGTH = 8
+
+GITHUB_URL = 'github.com'
