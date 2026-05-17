@@ -86,7 +86,7 @@ def change_password_view(request):
         if form.is_valid():
             form.save()
             login(request, request.user)
-            return redirect(USERS_DETAIL_URL, user_id=request.user.pk)
+            return redirect('users:detail', user_id=request.user.pk)
     else:
         form = ChangePasswordFormUser(request.user)
     
@@ -186,6 +186,7 @@ def skills_add(request, user_id):
     
     return JsonResponse({
         'skill_id': skill.id,
+        'name': skill.name,
         'created': created,
         'added': added
     })
