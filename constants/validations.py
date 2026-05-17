@@ -1,12 +1,16 @@
 import re
 from django import forms
 from users.models import User
+from constants import constants_teamfinder as t_constant
 from constants import constants_users as constant
 
 
 def validation_github_url(url: str):
-    if url and constant.GITHUB_URL not in url:
-        raise forms.ValidationError(f'Эта ссылка не ведёт на {constant.GITHUB_URL}')
+    if not url:
+        raise forms.ValidationError('Ссылка на GitHub обязательна')
+    if url and t_constant.GITHUB_URL not in url:
+        raise forms.ValidationError(f'Эта ссылка не ведёт на {t_constant.GITHUB_URL}')
+    
 
 
 def validation_phone(phone: str, user_pk=None):

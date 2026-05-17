@@ -44,15 +44,15 @@ class User(AbstractBaseUser, PermissionsMixin):
         unique=True
     )
     name = models.CharField(
-        verbose_name='Имя пользователя',
+        verbose_name='Имя',
         max_length=constant.MAX_LENGTH_NAME_USER
     )
     surname = models.CharField(
-        verbose_name='Фамилия пользователя',
+        verbose_name='Фамилия',
         max_length=constant.MAX_LENGTH_SURNAME_USER
     )
     avatar = models.ImageField(
-        verbose_name='Аватарка пользователя',
+        verbose_name='Аватарка',
         upload_to='avatars/'
     )
     phone = models.CharField(
